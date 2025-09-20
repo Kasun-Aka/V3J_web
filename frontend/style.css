@@ -42,7 +42,7 @@ section {
     top: 0;
     left: 0;
     width: 100vw;
-    padding: 1.5rem 4%;
+    padding: 2.5rem 4%;
     background: var(--header-bg);
     display: flex;
     justify-content: space-between;
@@ -71,14 +71,22 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0rem 4% ;
+    padding: 0rem 2.5% ;
+    position: relative;
+}
+
+.home-content {
+    z-index: 2;
+    position: absolute;
+    max-width: 50%;
+    left: 5%;
 }
 
 .home-img img {
-    margin: 0;
+    margin-left: 37vh;
     height: 100vh;
     width: auto;
-    animation: floatImage 4s ease-in-out infinite;
+    z-index: 1;
 }
 
 
@@ -119,16 +127,38 @@ span {
     margin-bottom: 1.5rem;
 }
 
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--btn-txt);
+    letter-spacing: .1rem;
+    font-weight: 900;
+    font-style: bold;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+    transform: scale(1.05);
+}
 
 .about {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    padding: 0rem 2.5% ;
 }
 
 .about-img img {
-    width: 35vw;
-    animation: dropPulse 2s infinite;   
+    height: 100vh;
+    width: auto;
+    margin-left: -24%;
+    z-index: 1; 
 }
 
 .heading {
@@ -140,7 +170,10 @@ span {
 
 .about-content {
     width: 100vw;
-    margin-left: 3rem;
+    margin-left: 85vh;
+    z-index: 2;
+    position: absolute;
+    max-width: 50%;
 }
 
 .about-content h2 {
@@ -164,25 +197,111 @@ span {
 }
 
 
-.img-container {
+.gallery .img-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    gap: 2rem;
+    gap: 4rem 2rem;
     
 }
 
 .img-box {
+    position: relative;
     display: flex;             
     flex-direction: column;    
     align-items: center;       
 }
 
+.txt-box {
+    position: absolute;
+    justify-self: flex-end;
+    bottom: 0;           
+    width: 90%;
+    height: 50%;
+    background: linear-gradient(rgba(255, 255, 255, .01), var(--main-color));
+    opacity: 80%;
+    border-radius: 8px;
+    transition: opacity 0.15s ease-in-out;
+    align-content: center;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.txt-box p {
+    margin: 0;
+    color: #fff;          
+    font-weight: bold;
+    position: relative;
+    bottom: -3rem;          
+}
+
+.img-box:hover {
+    transform: scale(120%);
+    transition: .5s ease;
+}
+
+.img-box:hover .txt-box {
+    transform: translateY(100%);
+    transition: .5s ease;
+    opacity: 0%;
+}
+
 .img-box img {
     width: 90%;         
     height: auto;
+    border-radius: 8px;
 }
 
+.contact {
+    min-height: 100vh;
+}
 
+.contact .heading {
+    margin-top: 1rem;
+}
+
+.contact h2 , .multiple-text3{
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
 
 
 
