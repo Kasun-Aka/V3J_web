@@ -1,24 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <link rel="stylesheet" href="style.css">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>V3J Automotive Solutions</title>
+
+    <!--custom CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- box icons -->
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 </head>
+
+<!-- Website designed & developed by GhostDevKA -->
+ <!-- Website designed & developed by GhostDevKA -->
+  <!-- Website designed & developed by GhostDevKA -->
+
 
 <body>
     <header class="header">
-        <h2>V3J Auto</h2>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#gallery">Gallery</a>
-            <a href="ourprojects.html">Our Projects</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
+        <img src="assets/Photo Logo4 wh.png" alt="" href="index.html#home">
+        <!-- h2>V3J Auto</h2 -->
+
+        <div class="navhead">
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#gallery">Gallery</a>
+                <a href="ourprojects.html">Our Projects</a>
+                <a href="#contact">Contact Us</a>
+            </nav>
+            <i class='bx  bx-menu-wide' id="menu-icon"></i>
+        </div>
     </header>
 
     <section class="home" id="home">
@@ -45,6 +64,10 @@
     </section>
 
     <section class="gallery" id="gallery">
+        <div class="gallery-img">
+        <img src="assets/gallery-img.jpg" alt="">
+        </div>
+        <div class="gallery-content">
         <h2 class="heading">Gallery</h2>
         <div class="img-container">
             <div class="img-box">
@@ -84,23 +107,31 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <section class="contact"  id="contact">
+        <div class="contact-img">
+        <img src="assets/contact-img.jpg" alt="">
+        </div>
+        <div class="contact-content">
         <h2 class="heading">Contact Us</h2>
             <div class="email-container">
                 <form id="contactForm">
                 <div data-aos="fade-up">
                 <div class="input-box">
                   <input type="text" placeholder="Full Name" id="name">
+                </div>
+                <div class="input-box">
                   <input type="email" placeholder="Email Address" id="email">
                 </div>
                 <div class="input-box">
                   <input type="number" placeholder="Mobile Number" id="phone">
+                </div>
+                <div class="input-box">
                   <input type="text" placeholder="Email Subject" id="subject">
                 </div>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="
-                Your Message"></textarea>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
                 </div>
                 <div data-aos="flip-up"
                 data-aos-delay="400">
@@ -112,15 +143,20 @@
         <div class="socialmedia">
 
         </div>
+        </div>
     </section>
     
     <footer class="footer">
         <div class="footer-txt">
-            <p>Copyright &copy; 2025 by V3J Automotive Solutions. | All Rights Reserved.</p>
+            <p>Copyright &copy; 2025 by V3J Automotive Solutions. | All Rights Reserved. 
+                <br><span style="font-size: 0.9em; color: #aaa;">
+                | Developed by <a href="https://kasun-akalanka-web.vercel.app/" target="_blank">GhostDevKA</a></span></p>
         </div>
         <div class="footer-btn">
 
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
