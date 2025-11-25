@@ -15,17 +15,15 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@300..700&family=Rouge+Script&family=Tourney&family=Bree+Serif&display=swap" rel="stylesheet">
 
 </head>
 
 <!-- Website designed & developed by GhostDevKA -->
- <!-- Website designed & developed by GhostDevKA -->
-  <!-- Website designed & developed by GhostDevKA -->
-
 
 <body>
     <header class="header">
-        <img src="assets/Photo Logo4 wh.png" alt="" href="index.html#home">
+        <img src="assets/Photo Logo4 wh.png" alt="V3J Automotive Solutions">
         <!-- h2>V3J Auto</h2 -->
 
         <div class="navhead">
@@ -33,8 +31,8 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#gallery">Gallery</a>
-                <a href="ourprojects.html">Our Projects</a>
                 <a href="#contact">Contact Us</a>
+                <a href="ourprojects.html">Our Projects</a>
             </nav>
             <i class='bx  bx-menu-wide' id="menu-icon"></i>
         </div>
@@ -42,7 +40,12 @@
 
     <section class="home" id="home">
     <div class="home-content">
-        <h1>Welcome to the V3J Automotive Solutions</h1><br>
+        <h1>Welcome to the</h1><br>
+        <div class="masking-container">
+        <h1 class="masked-text">V3J Automotive Solutions</h1>
+        </div>
+        <!--h1>V3J Automotive Solutions</h1-->
+        <br>
         <h2>We are here to help you with anything ralated to vehicles.</h2><br>
         <h3>Tell your problems, we give solutions...</h3>
     </div>
@@ -117,7 +120,7 @@
         <div class="contact-content">
         <h2 class="heading">Contact Us</h2>
             <div class="email-container">
-                <form id="contactForm">
+                <form id="contactForm" onsubmit="sendForm(event)">
                 <div data-aos="fade-up">
                 <div class="input-box">
                   <input type="text" placeholder="Full Name" id="name">
@@ -147,14 +150,17 @@
     </section>
     
     <footer class="footer">
+    <div class="footer-left">
+        <img src="assets/Photo Logo4 wh.png" alt="V3J Automotive Solutions">
         <div class="footer-txt">
             <p>Copyright &copy; 2025 by V3J Automotive Solutions. | All Rights Reserved. 
                 <br><span style="font-size: 0.9em; color: #aaa;">
                 | Developed by <a href="https://kasun-akalanka-web.vercel.app/" target="_blank">GhostDevKA</a></span></p>
         </div>
-        <div class="footer-btn">
-
-        </div>
+    </div>
+    <div class="footer-btn">
+        <a href="#home"><i class='bxr bx-chevron-up-square'></i> </a>
+    </div>
     </footer>
 
     <script src="script.js"></script>

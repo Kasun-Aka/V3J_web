@@ -8,8 +8,6 @@ menuIcon.onclick = () => {
 };
 
 
-
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
@@ -36,3 +34,33 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x-circle');
     navbar.classList.remove('active');
 };
+
+
+/*===== Contact form =====*/
+
+async function sendForm(event) {
+    event.preventDefault();
+
+    const data = {
+        name: document.querySelector("#name").value,
+        email: document.querySelector("#email").value,
+        phone: document.querySelector("#phone").value,
+        subject: document.querySelector("#subject").value,
+        message: document.querySelector("#message").value
+    };
+
+    const res = await fetch("http://localhost:5000/api/contact/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (result.success) {
+        alert("Message sent successfully! ❤️");
+        document.querySelector("#contactForm").reset();
+    } else {
+        alert("Failed to send message!");
+    }
+}
