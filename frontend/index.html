@@ -31,6 +31,7 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#gallery">Gallery</a>
+                <a href="#appointment">Appointments</a>
                 <a href="#contact">Contact Us</a>
                 <a href="ourprojects.html">Our Projects</a>
             </nav>
@@ -112,6 +113,66 @@
         </div>
         </div>
     </section>
+
+    <section class="appointment" id="appointment">
+      <div class="appointment-img">
+      <img src="assets/contact-img.jpg" alt="">
+      </div>
+      <h2 class="heading">Make an Appointment</h2>
+      <div class="appointment-content">
+      <div class="appointment-left">
+        <div class="appointment-form">
+        <form id="appointment-form">
+          <div class="input-box">
+            <p>Your Name</p>
+            <input type="text" placeholder="Eg: Udana Perera" id="cus-name">
+          </div>
+          <div class="input-row">
+          <div class="input-box">
+            <p>Contact Number</p>
+            <input type="number" placeholder="Eg: 07xxxxxxxx" id="cus-phone">
+          </div>
+          </div>
+        
+        <div class="input-box">
+        <p>Vehicle Model</p>
+        <input type="text" placeholder="Eg: BMW M5 2019" id="vehicle-model">
+        </div>
+
+        <div class="input-box">
+        <p>Appointment Purpose</p>
+        <textarea id="purpose" cols="30" rows="2" placeholder="Eg: Check the AC system"></textarea>
+        </div>
+
+        <div class="input-row">
+        <div class="input-box">
+            <p>Date</p>
+            <input type="date" id="app-date">
+        </div>
+
+        <div class="input-box">
+            <p>Time</p>
+            <input type="time" id="app-time">
+        </div>
+        </div>
+
+        <div class="app-btn">
+        <input type="submit" value="Create Appointment" class="btn">
+        </div>
+        </form>
+        </div>
+        </div>
+        <div class="appointment-right">
+        <h3>Calendar</h3>
+        <iframe
+            src="https://calendar.google.com/calendar/embed?src=e25b901e48500c253635ada8b8276f27dee084849dd3b00dc2c52cf6fc4b3187%40group.calendar.google.com&ctz=Asia%2FColombo"
+            class="calendar-frame"
+            frameborder="0"
+            scrolling="no">
+        </iframe>
+        </div>
+        </div>
+        </section>
 
     <section class="contact"  id="contact">
         <div class="contact-img">

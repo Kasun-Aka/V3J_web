@@ -11,7 +11,7 @@
 }
 
 :root {
-    --bg-color: rgb(5, 22, 53);
+    --bg-color: rgb(3, 10, 23);
     --second-bg-color: rgba(50, 57, 70);
     --text-color: #fff;
     --main-color: rgb(150, 48, 0);
@@ -20,8 +20,8 @@
     --btn-main-color: rgb(13, 107, 180);
     --btn-secondary-color: rgba(127, 199, 255, 0.853);
     --btn-txt: rgb(255, 255, 255);
-    --header-bg: rgba(0, 0, 0, 0.8);
-    --footer-bg: rgba(50, 57, 70, 0.9);
+    --header-bg: rgba(0, 0, 0, 0.7);
+    --footer-bg: rgba(50, 57, 70, 0.8);
     --header-tx: #fff;
     --skills-bg: transparent;
 }
@@ -38,7 +38,7 @@ body {
 
 section {
     min-height: 100vh;
-    padding: 10rem, 0rem;
+    padding: 10rem 0rem;
 }
 
 .header {
@@ -280,6 +280,7 @@ span {
     justify-content: space-around;
     align-items: center;
     position: relative;
+    padding: 0rem 2.5%;
 }
 
 .gallery-img {
@@ -363,6 +364,128 @@ span {
     border-radius: 8px;
 }
 
+.appointment {
+    align-items: center;
+    padding: 0rem 3%;
+    min-height: 100vh;
+}
+
+.appointment .heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 3rem;
+    padding: 7.5rem 1rem 0 0;
+    width: 100%;
+}
+
+.appointment-content {
+    display: flex;
+    position: relative;
+}
+
+.appointment-img {
+    position: absolute;
+    height: 100vh;
+    width: 2000px;
+    margin-left: -3%;
+    margin-right: -3%;
+    overflow: hidden;
+}
+
+.appointment-img img {
+    width: 100%;
+    height: 100%;
+    filter: blur(3px) brightness(65%);
+    object-fit: cover;
+    z-index: 1; 
+}
+
+.appointment-left,
+.appointment-right {
+    z-index: 2;
+    position: relative;
+    flex: 1;
+    padding: 2rem;
+}
+
+.appointment-left {
+    max-width: 100%;
+    
+}
+
+.appointment-right {
+    max-width: 100%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appointment-left .appointment-form form {
+    width: 100%;
+}
+    
+.input-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.input-row .input-box {
+    width: 50%;
+}
+
+.input-box {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+.input-box p,
+textarea + p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-form input[type="text"],
+.appointment-form input[type="number"],
+.appointment-form input[type="date"],
+.appointment-form input[type="time"],
+.appointment-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    font-size: 1.6rem;
+    background: rgb(125, 136, 156);
+    color: white;
+    border: none;
+    margin: 0.7rem 0;
+}
+
+.appointment-form input::placeholder,
+.appointment-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.appointment-form .app-btn {
+    justify-self: center;
+}
+
+.appointment-right h3 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.calendar-frame {
+    width: 100%;
+    height: 400px;
+    border-radius: 1rem;
+    border: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+
+
 .contact {
     min-height: 100vh;
     display: flex;
@@ -439,9 +562,8 @@ span {
     resize: none;
 }
 
-.contact-content form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
+.contact-content form .app-btn {
+    justify-self: center;
 }
 
 
