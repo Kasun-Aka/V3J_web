@@ -15,7 +15,7 @@
     --second-bg-color: rgba(50, 57, 70);
     --text-color: #fff;
     --main-color: rgb(150, 48, 0);
-    --heading: rgb(255, 159, 49);
+    --heading: rgb(120, 197, 255);
     --main-color-darken: rgba(116, 37, 1, 0.648);
     --btn-main-color: rgb(13, 107, 180);
     --btn-secondary-color: rgba(127, 199, 255, 0.853);
@@ -29,9 +29,12 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body {
+    max-width: 100vw;
+    margin: 0 auto;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -64,7 +67,7 @@ section {
 }
 
 .header img:hover {
-    filter: drop-shadow(0 0 10px var(--main-color));
+    filter: drop-shadow(0 0 10px var(--heading));
 }
 
 .header.sticky {
@@ -130,37 +133,51 @@ section {
 }
 
 .home {
-    display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0rem 2.5% ;
+    padding: 0rem 0%;
     position: relative;
 }
 
 .home-content {
+    display: flex;
     position: relative;
+}
+
+.home-txt {
     z-index: 2;
-    max-width: 50%;
-    margin-left: 5%;
-    
+    position: relative;
+    max-width: 65%;
+    padding: 0rem 5%;
+    flex: 1;
+    margin-top: 13%;
+}
+
+.home-img {
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    max-width: 100%;
+    right: 0;
+    flex: 1;
+    overflow: hidden;
 }
 
 .home-img img {
-    position: relative;
     z-index: 1;
-    height: 100vh;
-    width: auto;
-    margin-left: -16%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
-.home-content h2 {
+.home-txt h2 {
     font-family: "Questrial", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
 }
 
-.home-content h3 {
+.home-txt h3 {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -168,12 +185,7 @@ section {
     font-size: 3rem;
 }
 
-span {
-    color: var(--main-color);
-    font-style: normal;
-}
-
-.home-content h1 {
+.home-txt h1 {
     font-family: "Rouge Script", cursive;
     font-weight: 400;
     font-style: normal;
@@ -183,7 +195,7 @@ span {
     margin-bottom: 1.5rem;
 }
 
-.home-content .masking-container h1 {
+.home-txt .masking-container h1 {
     font-family: "Tourney", sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -229,21 +241,7 @@ span {
 .btn:hover {
     box-shadow: 0 0 1rem var(--btn-secondary-color);
     transform: scale(1.05);
-}
-
-.about {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-    padding: 0rem 2.5% ;
-}
-
-.about-img img {
-    height: 100vh;
-    width: auto;
-    margin-left: -24%;
-    z-index: 1; 
+    cursor: pointer;
 }
 
 .heading {
@@ -251,28 +249,68 @@ span {
     margin-top: -3rem;
     margin-bottom: 3rem;
     font-size: 4.5rem;
-    font-family: "Bree Serif", serif;
+    font-family: "Saira Stencil One", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-shadow: 0 0 5px rgb(44, 100, 143);   
+}
+
+.about {
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 0rem 0% ;
 }
 
 .about-content {
-    width: 100vw;
-    margin-left: 85vh;
-    z-index: 2;
-    position: absolute;
-    max-width: 50%;
+    display: flex;
+    position: relative;
 }
 
-.about-content h2 {
+.about-img img {
+    z-index: 1; 
+    position: absolute;
+    height: 100vh;
+    max-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.about-txt {
+    max-width: 50%;
+    right: 0;
+    z-index: 2;
+    position: absolute;
+    padding: 0rem 4%;
+    margin-top: 14%;
+}
+
+.about-txt .heading {
     text-align: left;
-    line-height: 1.2;
-    margin-bottom: 4.5rem;
+    margin-bottom: 3.5rem;
     color: var(--heading);
 }
 
-.about-content h3 {
+.about-txt h3 {
     font-size: 2.6rem;
+}
+
+.about-txt .social-media {
+    font-size: 5rem;
+    display: flex;
+    gap: 40px;
+    margin-top: 10rem;
+}
+
+.social-media a {
+    position: relative;
+    color: #fff;
+}
+
+.social-media a:hover {
+    filter: drop-shadow(0 0 15px var(--btn-main-color));
+    transform: scale(1.5);
+    transition-duration: 0.5s;
 }
 
 .gallery {
@@ -302,11 +340,12 @@ span {
 .gallery-content {
     z-index: 2;
     position: absolute;
-    padding: 10rem 4%;
+    padding: 8rem 4%;
 }
 
 .gallery-content .heading {
-    margin-top: 1px;
+    margin-top: -1rem;
+    margin-bottom: 1rem;
     color: var(--heading);
 }
 
@@ -340,11 +379,11 @@ span {
 
 .txt-box p {
     margin: 0;
-    color: #fff; 
+    color: #fff;
     font-size: 1.6rem;         
     font-weight: bold;
     position: relative;
-    bottom: -3rem;          
+    bottom: -20%;          
 }
 
 .img-box:hover {
@@ -366,30 +405,16 @@ span {
 
 .appointment {
     align-items: center;
-    padding: 0rem 3%;
     min-height: 100vh;
-}
-
-.appointment .heading {
     position: relative;
-    z-index: 1;
-    text-align: center;
-    font-size: 3rem;
-    padding: 7.5rem 1rem 0 0;
-    width: 100%;
-}
-
-.appointment-content {
-    display: flex;
-    position: relative;
+    padding: 0%;
 }
 
 .appointment-img {
     position: absolute;
-    height: 100vh;
-    width: 2000px;
-    margin-left: -3%;
-    margin-right: -3%;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -398,7 +423,24 @@ span {
     height: 100%;
     filter: blur(3px) brightness(65%);
     object-fit: cover;
-    z-index: 1; 
+    z-index: 0; 
+}
+
+.appointment .heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 4rem;
+    padding: 5.25rem 1rem 0 0;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    color: var(--heading);
+}
+
+.appointment-content {
+    display: flex;
+    position: relative;
+    padding: 0rem 3%;
 }
 
 .appointment-left,
@@ -443,7 +485,7 @@ span {
 
 .input-box p,
 textarea + p {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -487,19 +529,17 @@ textarea + p {
 
 
 .contact {
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    padding: 0rem 2.5% ;
+    min-height: 100vh;
     position: relative;
+    padding: 0%;
 }
 
 .contact-img {
-    height: 100vh;
-    width: 2000px;
-    margin-left: -3%;
-    margin-right: -3%;
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -508,36 +548,50 @@ textarea + p {
     height: 100%;
     filter: blur(3px) brightness(65%);
     object-fit: cover;
-    z-index: 1; 
+    z-index: 0; 
 }
 
-.contact-content {
-    z-index: 2;
-    position: absolute;
-}
-
-.contact-content .heading {
-    margin-top: 1rem;
+.contact .heading {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 5rem 1rem 0 0;
+    margin-bottom: 1rem;
     color: var(--heading);
 }
 
-.contact-content form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
+.contact-content {
+    top: 17%;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    position: relative;
 }
 
-.contact-content form .input-box {
+.email-container {
+    display: flex;
+    position: relative;
+    flex: 0.6;
+    left: 5%;
+
+}
+
+.email-container form {
+    width: 70rem;
+    margin: 0.5rem 5%;
+    text-align: center;
+}
+
+.email-container form .input-box {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 70rem;
+    width: 100%;
     height: auto;
 }
 
-.contact-content form .input-box input,
-.contact-content form textarea {
+.email-container form .input-box input,
+.email-container form textarea {
     width: 100%;
     object-fit: cover;
     padding: 1.5rem;
@@ -554,18 +608,41 @@ textarea + p {
   opacity: 1;
 }
 
-.contact-content form .input-box input {
-    width: 100%;
-}
-
-.contact-content form textarea {
+.email-container form textarea {
     resize: none;
 }
 
-.contact-content form .app-btn {
+.email-container form .app-btn {
     justify-self: center;
 }
 
+.contact-txt {
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin-top: 10%;
+    flex: 0.4;
+    right: -2.5%
+}
+
+.contact-txt .txt-row {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5% 2%;
+    background-color: rgba(3, 10, 23, 0.85);
+    border-radius: 15px;
+}
+
+.txt-row i,
+.txt-row p {
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    color: rgb(13, 107, 180);
+}
 
 
 .footer {
@@ -596,9 +673,22 @@ textarea + p {
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
 }
 
+.footer-txt a {
+    color:#aaa;
+    text-decoration: underline;
+    text-shadow: 0 0 5px var(--main-color);
+}
+
 .footer-txt p {
     margin-left: 4rem;
     font-size: 1.6rem;
+}
+
+.footer-btn {
+    display: flex;
+    position: absolute;
+    right: 2%;
+
 }
 
 .footer-btn a {
@@ -617,8 +707,9 @@ textarea + p {
 
 .footer-btn a i {
     font-size: 2.4rem;
-    color: var(--second-bg-color);
+    color: var(--btn-txt);
 }
+
 
 
 
@@ -638,23 +729,118 @@ textarea + p {
     }
 
     section {
-        padding: 10rem 2% 2rem;
+        padding: 5rem 2%;
     }
 
-    .about-content {
-        width: 95%;
-
+    .about-txt, .home-txt {
+        background-color: var(--header-bg);
+        border-radius: 15px;
     }
 
-    .projects {
-        padding-bottom: 7rem;
+    .about-txt .heading, .about-txt h3:nth-of-type(2),
+    .home-txt h1, .home-txt h3 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .gallery {
+        min-height: 105vh;
+    }
+
+    .appointment-content {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0rem 3%;
     }
 
     .contact {
-        max-height: 50vh;
+        min-height: 120vh;
+    }
+
+    .email-container form {
+        margin-bottom: 0rem;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-txt{
+        margin-top: 1rem;
+        margin-left: 5%;
+    }
+
+    .contact-txt i,
+    .contact-txt p {
+        font-size: 2rem;
     }
     
     .footer {
         padding: 1.5rem 2%;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 50%;
+    }
+
+    #menu-icon { display: block; }
+
+    .navhead { justify-content: right;}
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--header-bg);
+        display: none;
+        flex-direction: column;
+    }
+    .navbar.active { display: flex; }
+    .navbar a { display: block; font-size: 2rem; margin: 1rem 0; }
+    .navhead i { display: block; font-size: 4rem; margin: 1rem 0; }
+
+    .about-txt, .home-txt {
+        max-width: 75%;
+        margin-top: 35%;
+    }
+
+    .gallery-content .img-container {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 2rem 1rem;
+    }
+
+    .contact-txt {
+        margin-top: 2%;
+        left: 10%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    section {
+        min-height: 80vh;
+        padding: 1% 0rem;
+    }
+    
+    .about-txt, .home-txt {
+        max-width: 100%;
+        margin-top: 50%;
+    }
+
+    .email-container {
+        max-width: 50rem;
+    }
+
+    .email-container .input-box input {
+        width: 100%
+    }
+
+    .footer {
+        flex-direction: column-reverse;
     }
 }

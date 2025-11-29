@@ -15,7 +15,7 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@300..700&family=Rouge+Script&family=Tourney&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Quicksand:wght@300..700&family=Rouge+Script&family=Tourney&family=Saira+Stencil+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -41,6 +41,7 @@
 
     <section class="home" id="home">
     <div class="home-content">
+        <div class="home-txt">
         <h1>Welcome to the</h1><br>
         <div class="masking-container">
         <h1 class="masked-text">V3J Automotive Solutions</h1>
@@ -53,17 +54,26 @@
     <div class="home-img">
         <img src="assets/home-img.png" alt="">
     </div>
+    </div>
     </section>
 
     <section class="about" id="about">
+        <div class="about-content">
         <div class="about-img">
             <img src="assets/about-img.png" alt="">
         </div>
-        <div class="about-content">
+        <div class="about-txt">
             <h2 class="heading">About Us</h2>
             <h3>We are fully authorized company providing best automotive solutions in the island.</h3>
             <br>
             <h3>V3J Automotive solutions</h3>
+
+            <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><i class='bxl  bx-facebook-circle'> </i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class='bxl  bx-instagram'></i></a>
+            <a href="https://www.tiktok.com" target="_blank"><i class='bxl  bx-tiktok'></i></a>
+            </div> 
+        </div>
         </div>
     </section>
 
@@ -83,7 +93,7 @@
             <div class="img-box">
                 <img src="assets/gal-1.png" alt="">
                 <div class="txt-box">
-                    <p>Photo 3</p>
+                    <p>Photo 2</p>
                 </div>
             </div>
             <div class="img-box">
@@ -130,7 +140,7 @@
           <div class="input-row">
           <div class="input-box">
             <p>Contact Number</p>
-            <input type="number" placeholder="Eg: 07xxxxxxxx" id="cus-phone">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Eg: 07xxxxxxxx" id="cus-phone">
           </div>
           </div>
         
@@ -164,9 +174,8 @@
         </div>
         <div class="appointment-right">
         <h3>Calendar</h3>
-        <iframe
-            src="https://calendar.google.com/calendar/embed?src=e25b901e48500c253635ada8b8276f27dee084849dd3b00dc2c52cf6fc4b3187%40group.calendar.google.com&ctz=Asia%2FColombo"
-            class="calendar-frame"
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Asia%2FColombo&showPrint=0&src=djNqYXV0b21vdGl2ZXNvbHV0aW9uc0BnbWFpbC5jb20&src=ZW4ubGsjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23039be5&color=%230b8043"
+        class="calendar-frame"
             frameborder="0"
             scrolling="no">
         </iframe>
@@ -178,11 +187,10 @@
         <div class="contact-img">
         <img src="assets/contact-img.jpg" alt="">
         </div>
-        <div class="contact-content">
         <h2 class="heading">Contact Us</h2>
+        <div class="contact-content">
             <div class="email-container">
                 <form id="contactForm" onsubmit="sendForm(event)">
-                <div data-aos="fade-up">
                 <div class="input-box">
                   <input type="text" placeholder="Full Name" id="name">
                 </div>
@@ -190,22 +198,25 @@
                   <input type="email" placeholder="Email Address" id="email">
                 </div>
                 <div class="input-box">
-                  <input type="number" placeholder="Mobile Number" id="phone">
+                  <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Mobile Number" id="phone">
                 </div>
                 <div class="input-box">
                   <input type="text" placeholder="Email Subject" id="subject">
                 </div>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-                </div>
-                <div data-aos="flip-up"
-                data-aos-delay="400">
-                <input type="submit" value="Send" class="btn" id="submit">
-                </div>
-              </form>
-          
-            </div>
-        <div class="socialmedia">
+            
 
+                <input type="submit" value="Send" class="btn" id="submit">
+
+              </form>
+            </div>
+        <div class="contact-txt">
+            <div class="txt-row">
+            <i class='bx  bxs-phone'> </i>  <p>071-955 8388</p> 
+            </div>
+            <div class="txt-row">
+            <i class='bx  bxs-location-alt-2'></i>  <p>Mobile Service - Around Malabe & Maharagama</p> 
+            </div>
         </div>
         </div>
     </section>
@@ -220,7 +231,7 @@
         </div>
     </div>
     <div class="footer-btn">
-        <a href="#home"><i class='bxr bx-chevron-up-square'></i> </a>
+        <a href="#home"><i class='bxr  bxs-chevron-up-square'></i></a>
     </div>
     </footer>
 

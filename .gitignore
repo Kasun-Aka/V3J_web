@@ -27,16 +27,9 @@ Desktop.ini
 # Secrets
 .env
 *.env
-backend/config/firebase-service-account.json
+backend/keys/
 
 
 # Temporarily Ignored
-test.txt
-test.css
-frontend/assets
-package.json
-ourprojects.html
-ourprojects.css
 
-backend/
 

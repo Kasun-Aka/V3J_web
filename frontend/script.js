@@ -64,3 +64,65 @@ async function sendForm(event) {
         alert("Failed to send message!");
     }
 }
+
+
+/*===== Appoinment form =====*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const appointmentForm = document.getElementById("appointment-form");
+
+    appointmentForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("cus-name").value.trim();
+        const phone = document.getElementById("cus-phone").value.trim();
+        const vehicleModel = document.getElementById("vehicle-model").value.trim();
+        const purpose = document.getElementById("purpose").value.trim();
+        const date = document.getElementById("app-date").value;
+        const time = document.getElementById("app-time").value;
+
+        // validation
+        if (!name || !phone || !vehicleModel || !purpose || !date || !time) {
+            alert("Please fill all required fields ❗");
+            return;
+        }
+
+        const phoneRegex = /^(07[0-9]{8})$/;
+        if (!phoneRegex.test(phone)) {
+            alert("Please enter a valid phone number (Ex: 07xxxxxxxx) ❗");
+            return;
+        }
+
+        const payload = {
+        cusName: name,
+        cusPhone: phone,
+        vehicleModel: vehicleModel,
+        purpose: purpose,
+        date: date,
+        time: time
+        };
+
+        try {
+            const response = await fetch("http://localhost:5000/api/appointment/create", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                alert("Appointment created successfully! 🎉");
+                appointmentForm.reset();
+            } else {
+                alert(`Failed to create appointment ❗\n${result.message || "Server error"}`);
+            }
+        } catch (error) {
+            alert("Network error ❗ Please try again.");
+            console.error("Error:", error);
+        }
+    });
+});
+
