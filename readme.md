@@ -1,11 +1,11 @@
-#🚗 V3J Automotive Solutions — Official Website (Full Project)
+# 🚗 V3J Automotive Solutions — Official Website (Full Project)
 
 This repository contains the complete full-stack project developed for V3J Automotive Solutions, a professional automobile service center.
 The system includes a fully responsive frontend website and a production-ready backend API.
 
 This is my first professional client project that I fully built and deployed.
 
-##⭐ Project Overview
+## ⭐ Project Overview
 🔹 Frontend
 - Modern, responsive UI
 - Smooth animations and intuitive design
@@ -20,7 +20,7 @@ This is my first professional client project that I fully built and deployed.
 - Validation + error handling
 - Deployed on Render
 
-##🛠️ Tech Stack
+## 🛠️ Tech Stack
 🔹Frontend
 - HTML5
 - CSS3
@@ -37,12 +37,13 @@ This is my first professional client project that I fully built and deployed.
 
 **Render** (deployment)
 
-##📌 Live Links
+## 📌 Live Links
 🔗 Frontend Website
 https://v3j.netlify.app/
 
-##👨‍💻 Developer
+## 👨‍💻 Developer
 Kasun Akalanka
 Portfolio: https://kasun-akalanka-web.vercel.app
 
 *This is my first fully developed and deployed professional project for a real client.*
+
