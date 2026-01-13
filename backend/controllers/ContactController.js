@@ -1,4 +1,4 @@
-import { transporter } from "../config/emailConfig.js";
+import { emailTransporter } from "../config/emailConfig.js";
 import ContactMessage from "../models/ContactMessage.js";
 
 export const sendContactEmail = async (req, res) => {
@@ -8,8 +8,8 @@ export const sendContactEmail = async (req, res) => {
         const contact = new ContactMessage(name, email, phone, subject, message);
 
         const mailOptions = {
-            from: email,
-            to: process.env.RECEIVE_EMAIL, // your email
+            from: `Website Contact Form <postmaster@${process.env.MAILGUN_DOMAIN}>`,
+            to: process.env.RECEIVE_EMAIL,
             subject: `New Contact Form Message: ${subject}`,
             html: `
                 <h3>New Contact Message</h3>
@@ -21,7 +21,7 @@ export const sendContactEmail = async (req, res) => {
             `
         };
 
-        await transporter.sendMail(mailOptions);
+        await emailTransporter.sendMail(mailOptions);
 
         return res.json({ success: true, message: "Email sent successfully!" });
 

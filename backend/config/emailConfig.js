@@ -1,11 +1,17 @@
-import nodemailer from "nodemailer";
 import dotenv from "dotenv";
+
+import nodemailer from "nodemailer";
+import mgTransport from "nodemailer-mailgun-transport";
+
 dotenv.config();
 
-export const transporter = nodemailer.createTransport({
-    service: "gmail",
+const mailgunAuth = {
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
-    }
-});
+        api_key: process.env.MAILGUN_API_KEY, 
+        domain: process.env.MAILGUN_DOMAIN,
+    },
+};
+
+const transporter = nodemailer.createTransport(mgTransport(mailgunAuth));
+
+export const emailTransporter = transporter;
