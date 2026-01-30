@@ -5,6 +5,13 @@ The system includes a fully responsive frontend website and a production-ready b
 
 This is my first professional client project that I fully built and deployed.
 
+
+**All images, photographs, logos, and personal branding assets included in this repository are © V3J.**
+
+**These assets are not covered by the MIT License and may not be copied, modified, redistributed, or used for any purpose without explicit permission from the author.**
+
+
+
 ## ⭐ Project Overview
 🔹 Frontend
 - Modern, responsive UI
